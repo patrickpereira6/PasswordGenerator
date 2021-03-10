@@ -50,67 +50,67 @@ function generatePassword() {
   if (!confirmNumber && !confirmCharacters && !confirmUppercase && !confirmLowercase) {
     choices = alert("you must choose a criteria!");
   }
-    // else if for 4 positive options
+  // else if for 4 positive options
 
-    if (confirmNumber && confirmCharacter && confirmUppercase && confirmLowerase) {
-      choices = character.concat(number, alpha, alpha2);
-    }
-
-    // else if for 3 positives
-    else if (confirmCharacter && confirmNumber && confirmUppercase) {
-      choices = character.concat(number, alpha2);
-    } else if (confirmCharacter && confirmLowerase && confirmUppercase) {
-      choices = character.concat(alpha, alpha2);
-    } else if (confirmCharacter && confirmNumber && confirmLowercase) {
-      choices = chartacter.concat(number, alpha);
-    } else if (confirmNumber && confirmLowerase && confirmUppercase) {
-      choices = number.concat(alpha, alpha2);
-    }
-
-    // else if 2 positive
-    else if (confirmCharacter && confirmNumber) {
-      choices = character.concat(number);
-
-    } else if (confirmCharacter && confirmLowercase) {
-      choices = character.concat(alpha);
-
-    } else if (confirmCharacter && confirmUppercase) {
-      choices = character.concat(alpha2);
-    } else if (confirmLowercase && confirmNumber) {
-      choices = alpha.concat(number);
-
-    } else if (confirmLowercase && confirmUppercase) {
-      choices = alpha.concat(alpha2);
-
-    } else if (confirmNumber && confirmUppercase) {
-      choices = number.concat(alpha2);
-    }
-    // else if 1 positive
-    else if (confirmCharacters) {
-      choices = character;
-    } else if (confirmNumber) {
-      choices = number;
-    } else if (confirmLowercase) {
-      choices = alpha;
-    }
-    //Uppercase conversion
-    else if (confirmUppercase) {
-      choices = space.concat(alpha2);
-    };
-
-    // variable an array placeholder for generated length
-    var password = [];
-
-    // random selection variables:
-    for (var i = 0; i < enter; i++) {
-      var pickChoices = choices[Math.floor(Math.random() * choices.length)];
-      password.push(pickChoices);
+  if (confirmNumber && confirmCharacter && confirmUppercase && confirmLowerase) {
+    choices = character.concat(number, alpha, alpha2);
   }
 
-    //join password array and convert to a string
-    var ps = password.join("");
-    UserInput(ps);
-    return ps;
+  // else if for 3 positives
+  else if (confirmCharacter && confirmNumber && confirmUppercase) {
+    choices = character.concat(number, alpha2);
+  } else if (confirmCharacter && confirmLowerase && confirmUppercase) {
+    choices = character.concat(alpha, alpha2);
+  } else if (confirmCharacter && confirmNumber && confirmLowercase) {
+    choices = chartacter.concat(number, alpha);
+  } else if (confirmNumber && confirmLowerase && confirmUppercase) {
+    choices = number.concat(alpha, alpha2);
+  }
+
+  // else if 2 positive
+  else if (confirmCharacter && confirmNumber) {
+    choices = character.concat(number);
+
+  } else if (confirmCharacter && confirmLowercase) {
+    choices = character.concat(alpha);
+
+  } else if (confirmCharacter && confirmUppercase) {
+    choices = character.concat(alpha2);
+  } else if (confirmLowercase && confirmNumber) {
+    choices = alpha.concat(number);
+
+  } else if (confirmLowercase && confirmUppercase) {
+    choices = alpha.concat(alpha2);
+
+  } else if (confirmNumber && confirmUppercase) {
+    choices = number.concat(alpha2);
+  }
+  // else if 1 positive
+  else if (confirmCharacters) {
+    choices = character;
+  } else if (confirmNumber) {
+    choices = number;
+  } else if (confirmLowercase) {
+    choices = alpha;
+  }
+  //Uppercase conversion
+  else if (confirmUppercase) {
+    choices = space.concat(alpha2);
+  };
+
+  // variable an array placeholder for generated length
+  var password = [];
+
+  // random selection variables:
+  for (var i = 0; i < enter; i++) {
+    var pickChoices = choices[Math.floor(Math.random() * choices.length)];
+    password.push(pickChoices);
+  }
+
+  //join password array and convert to a string
+  var ps = password.join("");
+  UserInput(ps);
+  return ps;
 }
 
 //put value intotextbox
@@ -121,5 +121,5 @@ function UserInput(ps) {
 
 var copy = document.querySelector("#copy");
 copy.addEventListener("click", function () {
-    copyPassword();
+  copyPassword();
 });
