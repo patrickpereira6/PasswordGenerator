@@ -1,5 +1,4 @@
 # Password Generator Starter Code
-
 - When button is clicked, user is presented with a series of prompts for password criteria
 - When promopted, user selects creiteria to include
 - Password must include 8-128 characters
@@ -20,7 +19,7 @@
 
 
 ## Website
-
+https://patrickpereira6.github.io/PasswordGenerator/
 
 ## Contribution
 Patrick Pereira
